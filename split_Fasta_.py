@@ -12,6 +12,7 @@ for line in f :
             of.close()
         opened = True
         outname = os.path.join(output_dir,line[1:].rstrip())
-        of=open("%s.fa" % (outname, "w")
+        of=open("%s.fa" % (outname, "w"))
+        print line[1:].rstrip()
     of.write(line)
 of.close()
