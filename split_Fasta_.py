@@ -11,7 +11,8 @@ for line in f :
         if(opened) :
             of.close()
         opened = True
-        outname = os.path.join(output_dir,line[1:].rstrip()+".fa")
+        chrname = line[1:].split(" ")[0].rstrip()
+        outname = os.path.join(output_dir,chrname+".fa")
         of=open(outname, "w")
         print outname
     of.write(line)
